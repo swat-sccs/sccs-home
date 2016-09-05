@@ -7,6 +7,8 @@
   <meta charset="UTF-8">
   <title>{% block title %}{% endblock %}</title>
 
+  <link rel=stylesheet href="{% static 'css/base.css' %}">
+
   <!--Bootstrap-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
@@ -14,6 +16,15 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </head>
 <body>
+  <ul id="nav">
+    <a id="head" href="{% url 'home' %}">
+      <h1>SCCS</h1>
+      <h3>Swarthmore College Computer Society</h3>
+    </a>
+    <li>{% block nav-home %}<a href="{% url 'home' %}">Home</a>{% endblock %}</li>
+    <li>{% block nav-activities %}<a href="{% url 'about' %}">About</a>{% endblock %}</li>
+
+  </ul>
   {% block content %}
   {% endblock %}
 </body>
