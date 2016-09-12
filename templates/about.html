@@ -1,22 +1,26 @@
 {% extends 'base.html' %}
 
-{% block title %}Swarthmore College Computer Society{% endblock %}
+{% block title %}SCCS - About{% endblock %}
+
+{% block nav-about %}<a class="active" href="{% url 'about' %}">About</a>{% endblock %}
 
 {% block content %}
-  <h3>About</h3>
+  <div class="container">
+    <h3>About</h3>
 
-  <p>The Swarthmore College Computer Society (SCCS) is a student-run group 
-  offering computing services, tools, toys, and information to the Swarthmore 
-  College community. We have a computer lab and video room in Tarble, offer email 
-  and web accounts to users and student groups, and periodically host workshops 
-  on various topics in technology and computers. Our goal is not to mirror ITS, 
-  but to complement and supplement widely available services by providing 
-  resources that would otherwise be out of the reach of individuals.</p>
+    <p>The Swarthmore College Computer Society (SCCS) is a student-run group 
+    offering computing services, tools, toys, and information to the Swarthmore 
+    College community. We have a computer lab and video room in Tarble, offer email 
+    and web accounts to users and student groups, and periodically host workshops 
+    on various topics in technology and computers. Our goal is not to mirror ITS, 
+    but to complement and supplement widely available services by providing 
+    resources that would otherwise be out of the reach of individuals.</p>
 
-  <p>Our services include physical and electronic resources. For example, you can 
-  hang out or work in the Media Lounge, watch movies or play games in the Video 
-  Pit, and take photos or make movies with our cameras. Or, from the convenience 
-  of anywhere in the world with the internet, you can make your own website, get 
-  spam-free email, get l33t with a shell account, and make wikis, databases, and 
-  mailing lists for your group.</p>
+    <p>Our services include physical and electronic resources. For example, you can 
+    hang out or work in the Media Lounge, watch movies or play games in the Video 
+    Pit, and take photos or make movies with our cameras. Or, from the convenience 
+    of anywhere in the world with the internet, you can make your own website, get 
+    spam-free email, get l33t with a shell account, and make wikis, databases, and 
+    mailing lists for your group.</p>
+  </div>
 {% endblock %}

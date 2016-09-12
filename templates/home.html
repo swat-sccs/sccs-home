@@ -1,9 +1,56 @@
 {% extends 'base.html' %}
 
-{% block title %}Swarthmore College Computer Society{% endblock %}
+{% block title %}SCCS{% endblock %}
 
 {% block nav-home %}<a class="active" href="{% url 'home' %}">Home</a>{% endblock %}
 
 {% block content %}
+  <div class="container">
+    <div class="row">
+      <h1>Swarthmore College Computer Society</h1>
+    </div>
+    <div class="col-sm-8">
+      <h2>Welcome!</h2>
 
+      <p>We're a collective of student volunteers who maintain digital services for 
+      Swarthmore students, staff, and alumni.</p>
+      
+      <p>
+        <a href="https://rsd.sccs.swarthmore.edu/new/">Reserved Students Digest</a>
+      <p>
+      </p>
+        <a href="https://cygnet.sccs.swarthmore.edu/">Cygnet</a>
+      <p>
+      </p>
+        <a href="https://guts.sccs.swarthmore.edu/dash/">GUTS Dashboard</a>
+      </p>
+    </div>
+
+    <div class="col-sm-4">
+      <p>
+        Our staff
+      </p>
+      <p>
+        <strong>Class of 2017</strong>
+        <ul>
+          <li>Simon Bloch</li>
+          <li>Anna Jensen</li>
+        </ul>
+
+        <strong>Class of 2018</strong>
+        <ul>
+          <li>Clare Hanlon</li>
+          <li>Alex Mandel</li>
+          <li>Owen Kephart</li>
+          <li>Oliver Newman</li>
+        </ul>
+
+        <strong>Class of 2019</strong>
+        <ul>
+          <li>Wistan Chou</li>
+          <li>Tobin Feldman-Fitzthum</li>
+      </p>
+
+    </div>
+  </div>
 {% endblock %}

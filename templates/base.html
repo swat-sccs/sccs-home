@@ -7,24 +7,27 @@
   <meta charset="UTF-8">
   <title>{% block title %}{% endblock %}</title>
 
-  <link rel=stylesheet href="{% static 'css/base.css' %}">
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <!--Bootstrap-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-  <!--jQuery-->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-  <ul id="nav">
-    <a id="head" href="{% url 'home' %}">
-      <h1>SCCS</h1>
-      <h3>Swarthmore College Computer Society</h3>
-    </a>
-    <li>{% block nav-home %}<a href="{% url 'home' %}">Home</a>{% endblock %}</li>
-    <li>{% block nav-activities %}<a href="{% url 'about' %}">About</a>{% endblock %}</li>
-
-  </ul>
+  <nav class="navbar navbar-inverse">
+    <div class="container container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'home' %}">SCCS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>{% block nav-home %}<a href="{% url 'home' %}">Home</a>{% endblock %}</li>
+        <li>{% block nav-about %}<a href="{% url 'about' %}">About</a>{% endblock %}</li>
+        <li>{% block nav-faq %}<a href="{% url 'faq' %}">FAQs</a>{% endblock %}</li>
+      </ul>
+    </div>
+  </nav>
   {% block content %}
   {% endblock %}
 </body>
