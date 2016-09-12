@@ -1,0 +1,15 @@
+h1#sccs-head {
+	font-size: 30px;
+	font-size: 3.5vw;
+}
+
+div#sidebar {
+	/*background-color: #d9d9d9;*/
+	border: 1px solid orange;
+}
+
+a.service-button {
+	color: black;
+}
+
+
