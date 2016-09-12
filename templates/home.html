@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+
 {% block title %}SCCS{% endblock %}
+
+{% block staticfiles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
 
 {% block nav-home %}<a class="active" href="{% url 'home' %}">Home</a>{% endblock %}
 
@@ -8,7 +14,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h1>Swarthmore College Computer Society</h1>
+        <h1 id="sccs-head">Swarthmore College Computer Society</h1>
       </div>
     </div>
     <div class="row">
@@ -19,11 +25,11 @@
         Swarthmore students, staff, and alumni.</p>
 
         <p>Have a problem? Contact us at 
-        <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.</p>
+          <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.</p>
         
         <h2>Services</h2>
         <div class="row">
-          <a href="https://rsd.sccs.swarthmore.edu/new/">
+          <a class="service-button" href="https://rsd.sccs.swarthmore.edu/new/">
             <div class="col-sm-4">
               <div class="well well-small">
                 Reserved Students Digest
@@ -31,7 +37,7 @@
             </div>
           </a>
 
-          <a href="https://cygnet.sccs.swarthmore.edu/">
+          <a class="service-button" href="https://cygnet.sccs.swarthmore.edu/">
             <div class="col-sm-4">
               <div class="well well-small">
                 Cygnet
@@ -39,7 +45,7 @@
             </div>
           </a>
 
-          <a href="https://guts.sccs.swarthmore.edu/dash/">
+          <a class="service-button" href="https://guts.sccs.swarthmore.edu/dash/">
             <div class="col-sm-4">
               <div class="well well-small">
                 GUTS Dashboard
@@ -49,7 +55,7 @@
         </div>
       </div>
 
-      <div class="col-sm-4">
+      <div id="sidebar" class="col-sm-3">
         <p>
           <h4>Our Staff</h4>
 
