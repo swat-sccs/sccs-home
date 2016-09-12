@@ -1,55 +1,7 @@
-#head {
-  color: black;
-	text-decoration: none;
+* {
+  border-radius: 0 !important;
 }
 
-a h3 {
-  color: black;
-	text-decoration: none;
-}
-
-#nav {
-	z-index: 50;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	padding: 0;
-	/*overflow: hidden;*/
-	border-bottom: thick black;
-	background-color: white;
-	color: black;
-	list-style-type: none;
-}
-
-#nav li {
-	display: inline;
-	text-align: center;
-	float: left;
-}
-
-#nav li#about {
-	float: right;
-	margin-right: 5px;
-}
-
-#nav li a {
-	color: black;
-  display: block;
-	padding: 10px;
-	margin-left: 5px;
-	padding-right: 15px;
-	padding-left: 15px;
-	text-decoration: none;
-}
-
-/* Change link to bold when active */
-#nav li a.active {
-	font-weight: bold;
-}
-
-/* Change text to orange on hover */
-#nav li a:hover {
+.navbar-nav > li > a.active {
 	color: orange;
 }
-
-
