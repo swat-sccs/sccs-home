@@ -8,3 +8,7 @@ def about(request):
   context_dict = {}
   return render(request, 'about.html', context_dict)
 
+def faq(request):
+  context_dict = {}
+  return render(request, 'faq.html', context_dict)
+
