@@ -20,6 +20,6 @@ from sccs import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^about/$', views.about, name='about'),
-    url(r'^faqs/$', views.faq, name='faqs'),
+    url(r'^faqs/$', views.faqs, name='faqs'),
     url(r'^admin/', admin.site.urls),
 ]
