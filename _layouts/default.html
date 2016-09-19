@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCCS - {% if page.title %}{{ page.title }}{% endif %}</title>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"
+		integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+		crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/{{ page | title | map: 'downcase' }}.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container container-fluid">
+      <div class="navbar-header">
+				<a class="navbar-brand" href="{{ site.url }}/index.html">SCCS</a>
+      </div>
+      <ul class="nav navbar-nav">
+				<li><a href="{{ site.url }}/index.html"{% if page.url contains "/home/" %}class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ site.url }}/about/index.html"{% if page.url contains "/about/" %}class="active"{% endif %}>About</a></li>
+        <li><a href="{{ site.url }}/faqs/index.html"{% if page.url contains "/faqs/" %}class="active"{% endif %}>FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
+  {{ content }}
+</body>
+</html>
