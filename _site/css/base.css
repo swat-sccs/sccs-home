@@ -1,7 +1,0 @@
-* {
-  border-radius: 0 !important;
-}
-
-.navbar-nav > li > a.active {
-	color: orange;
-}
