@@ -2,6 +2,6 @@
   border-radius: 0 !important;
 }
 
-.navbar-nav > li > a.active {
+#bootstrap-overrides .navbar-nav > li > a.active {
 	color: orange;
 }

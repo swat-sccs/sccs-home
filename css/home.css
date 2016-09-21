@@ -1,6 +1,5 @@
-h1#sccs-head {
-	font-size: 30px;
-	font-size: 3.5vw;
+#bootstrap-overrides h1#sccs-head {
+	font-size: 40px;
 }
 
 div#sidebar {
@@ -8,8 +7,8 @@ div#sidebar {
 	border: 1px solid orange;
 }
 
-a.service-button {
+a.service-button, a.service-button {
 	color: black;
+	background-color: orange;
 }
-
 

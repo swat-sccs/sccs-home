@@ -17,19 +17,20 @@
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/{{ page | title | map: 'downcase' }}.css">
+	{% assign pageTitle = page.title | downcase %}
+	<link rel="stylesheet" href="{{ site.url }}/css/base.css">
+	<link rel="stylesheet" href="{{ site.url }}/css/{{ pageTitle }}.css">
 </head>
-<body>
+<body id="bootstrap-overrides">
   <nav class="navbar navbar-inverse">
     <div class="container container-fluid">
       <div class="navbar-header">
 				<a class="navbar-brand" href="{{ site.url }}/index.html">SCCS</a>
       </div>
       <ul class="nav navbar-nav">
-				<li><a href="{{ site.url }}/index.html"{% if page.url contains "/home/" %}class="active"{% endif %}>Home</a></li>
-        <li><a href="{{ site.url }}/about/index.html"{% if page.url contains "/about/" %}class="active"{% endif %}>About</a></li>
-        <li><a href="{{ site.url }}/faqs/index.html"{% if page.url contains "/faqs/" %}class="active"{% endif %}>FAQs</a></li>
+				<li><a href="{{ site.url }}/index.html" {% if pageTitle == 'home' %} class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ site.url }}/about/index.html" {% if pageTitle == 'about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{{ site.url }}/faqs/index.html" {% if pageTitle == 'faqs' %}class="active"{% endif %}>FAQs</a></li>
       </ul>
     </div>
   </nav>

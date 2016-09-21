@@ -1,6 +1,22 @@
 ---
 layout: default
 title: Home
+services:
+  - name: Reserved Students Digest
+    url: https://rsd.sccs.swarthmore.edu/
+    description: None
+  - name: Cygnet
+    url: https://cygnet.sccs.swarthmore.edu/
+    description: None
+  - name: GUTS Dashboard
+    url: https://guts.sccs.swarthmore.edu/dash/
+    description: None
+  - name: GUTS Dashboard
+    url: https://guts.sccs.swarthmore.edu/dash/
+    description: None
+  - name: GUTS Dashboard
+    url: https://guts.sccs.swarthmore.edu/dash/
+    description: None
 ---
 
 <div class="container">
@@ -20,35 +36,32 @@ title: Home
         <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.</p>
       
       <h2>Services</h2>
-      <div class="row">
-        <a class="service-button" href="https://rsd.sccs.swarthmore.edu/new/">
-          <div class="col-sm-4">
-            <div class="well well-small">
-              Reserved Students Digest
-            </div>
-          </div>
-        </a>
-
-        <a class="service-button" href="https://cygnet.sccs.swarthmore.edu/">
-          <div class="col-sm-4">
-            <div class="well well-small">
-              Cygnet
-            </div>
-          </div>
-        </a>
-
-        <a class="service-button" href="https://guts.sccs.swarthmore.edu/dash/">
-          <div class="col-sm-4">
-            <div class="well well-small">
-              GUTS Dashboard
-            </div>
-          </div>
-        </a>
-      </div>
+			{% for service in page.services %}
+			  {% assign loopindex = forloop.index | modulo: 3 %}
+				{% if loopindex == 1 %}
+			<div class="row">
+				{% endif %}
+				<div class="col-sm-4">
+					<a class="service-button" href="{{ service.url }}">
+						<div class="well well-small">
+							<p>{{ service.name }}</p>
+							<p>{{ service.description }}</p>
+						</div>
+					</a>
+				</div>
+				{% if loopindex == 0 %}
+			</div>
+				{% endif %}
+			{% endfor %}
+			{% if loopindex > 0 %}
+				{% for i in (loopindex..2) %}
+				<div class="col-sm-4"></div>
+				{% endfor %}
+			</div>
+			{% endif %}
     </div>
 
     <div id="sidebar" class="col-sm-3">
-      <p>
         <h4>Our Staff</h4>
 
         <strong>Class of 2017</strong>
@@ -69,7 +82,7 @@ title: Home
         <ul>
           <li>Wistan Chou</li>
           <li>Tobin Feldman-Fitzthum</li>
-      </p>
+				</ul>
     </div>
   </div>
 </div>
