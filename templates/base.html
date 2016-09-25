@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+  {% block staticfiles %}
+  {% endblock %}
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'home' %}">SCCS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>{% block nav-home %}<a href="{% url 'home' %}">Home</a>{% endblock %}</li>
+        <li>{% block nav-about %}<a href="{% url 'about' %}">About</a>{% endblock %}</li>
+        <li>{% block nav-faqs %}<a href="{% url 'faqs' %}">FAQs</a>{% endblock %}</li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row">
+
+  </div>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

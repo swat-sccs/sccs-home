@@ -1,7 +1,57 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
 * {
   border-radius: 0 !important;
 }
 
+#bootstrap-overrides nav, #bootstrap-overrides .navbar-default {
+	width: 100%;
+	background-color: white;
+	padding: 10px;
+	border: none;
+}
+
+#bootstrap-overrides .navbar * {
+	color: black;
+	text-shadow: none;
+	background-color: white;
+}
+
+#bootstrap-overrides .navbar .navbar-brand {
+	line-height: 1;
+  font-size: 15px;
+}
+
 #bootstrap-overrides .navbar-nav > li > a.active {
 	color: orange;
+}
+
+#bootstrap-overrides #nav-links {
+	border: 0px;
+}
+
+#bootstrap-overrides #nav-links a:hover {
+	background-color: gray;
+}
+
+#bootstrap-overrides button.navbar-toggle {
+	border: none;
+}
+
+#bootstrap-overrides button.navbar-toggle:hover {
+	background-color: gray;
+}
+
+#bootstrap-overrides button.navbar-toggle:active {
+	background-color: gray;
+}
+
+#bootstrap-overrides .icon-bar {
+	background-color: black;
 }

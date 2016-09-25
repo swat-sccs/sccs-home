@@ -1,14 +1,17 @@
+#bootstrap-overrides div#header {
+	background-image: url("images/amphitheatre.jpg");
+}
+
 #bootstrap-overrides h1#sccs-head {
 	font-size: 40px;
 }
 
 div#sidebar {
 	/*background-color: #d9d9d9;*/
-	border: 1px solid orange;
+	/*border: 1px solid orange;*/
 }
 
-a.service-button, a.service-button {
+a.service-button {
 	color: black;
 	background-color: orange;
 }
-
