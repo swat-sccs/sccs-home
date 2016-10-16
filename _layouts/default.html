@@ -13,8 +13,8 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="{{ site.url }}/index.html">
-            <img id="logo" src="{{ site.url }}/images/logo.png"></img>
+          <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/index.html">
+            <img id="logo" src="{{ site.url }}{{ site.baseurl }}/images/logo.png"></img>
           </a>
         </div>
 
@@ -22,21 +22,21 @@
           <ul class="nav navbar-nav">
             <li>
               {% assign page_title = page.title | downcase %}
-              <a href="{{ site.url}}/index.html" 
+              <a href="{{ site.url}}{{ site.baseurl }}/index.html" 
                 {% if page_title == 'home' %} class="active"{% endif %}>
                 Home
               </a>
             </li>
 
             <li>
-              <a href="{{ site.url }}/about/index.html" 
+              <a href="{{ site.url }}{{ site.baseurl }}/about/index.html" 
                 {% if page_title == 'about' %}class="active"{% endif %}>
                 About
               </a>
             </li>
 
             <li>
-              <a href="{{ site.url }}/faqs/index.html" 
+              <a href="{{ site.url }}{{ site.baseurl }}/faqs/index.html" 
                 {% if page_title == 'faqs' %}class="active"{% endif %}>
                 FAQs
               </a>
