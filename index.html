@@ -1,90 +1,80 @@
 ---
 layout: default
-title: Home
+title: home
 services:
   - name: Reserved Students Digest
     url: https://rsd.sccs.swarthmore.edu/
-    description: None
+    description: >
+      A listing of campus news, events, jobs, and more.
   - name: Cygnet
     url: https://cygnet.sccs.swarthmore.edu/
-    description: None
-  - name: GUTS Dashboard
+    description: >
+      A Swarthmore College student directory. Search by name, year, or dorm.
+  - name: Dashboard
     url: https://guts.sccs.swarthmore.edu/dash/
-    description: None
-  - name: GUTS Dashboard
-    url: https://guts.sccs.swarthmore.edu/dash/
-    description: None
-  - name: GUTS Dashboard
-    url: https://guts.sccs.swarthmore.edu/dash/
-    description: None
+    description: >
+      The starting point for all the features that come with an SCCS account.
 ---
 
 <div class="container">
-  <div id="header" class="row">
-    <div class="col-sm-12">
+  <header class="row">
+    <div class="col-xs-12">
       <h1 id="sccs-head">Swarthmore College Computer Society</h1>
     </div>
-  </div>
-  <div class="row">
-		<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
+  </header>
 
-		<div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+  <div class="row">
+    <div class="col-xs-12">
       <h2>Welcome!</h2>
 
       <p>We're a collective of student volunteers who maintain digital services for
       Swarthmore students, staff, and alumni.</p>
 
       <p>Have a problem? Contact us at
-        <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.</p>
+      <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.
+      </p>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-xs-12">
       <h2>Services</h2>
-			{% for service in page.services %}
-			  {% assign loopindex = forloop.index | modulo: 3 %}
-				{% if loopindex == 1 %}
-			<div class="row">
-				{% endif %}
-				<div class="col-sm-4">
-					<a class="service-button" href="{{ service.url }}">
-						<div class="well well-small">
-							<p>{{ service.name }}</p>
-							<p>{{ service.description }}</p>
-						</div>
-					</a>
-				</div>
-				{% if loopindex == 0 %}
-			</div>
-				{% endif %}
-			{% endfor %}
-			{% if loopindex > 0 %}
-				{% for i in (loopindex..2) %}
-				<div class="col-sm-4"></div>
-				{% endfor %}
-			{% endif %}
-    </div> <!--main column-->
+      <div class="row">
+      {% for service in page.services %}
+        <a href="{{ service.url }}">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="service-button">
+                <h4>{{ service.name }}</h4>
+                <p>{{ service.description }}</p>
+              </div>
+            </div>
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
 
-		<div id="sidebar" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-      <h4>Our Staff</h4>
+  <footer>
+    <h4>Our Staff</h4>
 
-      <strong>Class of 2017</strong>
-      <ul>
-        <li>Simon Bloch</li>
-        <li>Anna Jensen</li>
-      </ul>
+    <h5>Class of 2017</h5>
+    <ul>
+      <li>Simon Bloch</li>
+      <li>Anna Jensen</li>
+    </ul>
 
-      <strong>Class of 2018</strong>
-      <ul>
-        <li>Clare Hanlon</li>
-        <li><a href="http://oliver-newman.github.io/">Oliver Newman</a></li>
-        <li>Alex Mandel</li>
-        <li>Owen Kephart</li>
-      </ul>
+    <h5>Class of 2018</h5>
+    <ul>
+      <li>Clare Hanlon</li>
+      <li><a href="http://oliver-newman.github.io/">Oliver Newman</a></li>
+      <li>Alex Mandel</li>
+      <li>Owen Kephart</li>
+    </ul>
 
-      <strong>Class of 2019</strong>
-      <ul>
-        <li>Wistan Chou</li>
-        <li>Tobin Feldman-Fitzthum</li>
-			</ul>
-    </div> <!--sidebar-->
-  	<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"></div>
-  </div><!--row-->
+    <h5>Class of 2019</h5>
+    <ul>
+      <li>Wistan Chou</li>
+      <li>Tobin Feldman-Fitzthum</li>
+    </ul>
+  </footer> 
 </div>

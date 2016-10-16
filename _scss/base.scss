@@ -1,0 +1,47 @@
+$sccs-blue: #31425f;
+$sccs-orange: #f46336;
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 801px;
+}
+
+#header-nav {
+  border-radius: 0;
+  border: none;
+  border-bottom: solid #dddddd 1px;
+  text-shadow: none;
+  background-color: $sccs-blue;
+  #logo {
+    max-height: 100%;
+  }
+  #nav-links {
+    a {
+      color: white;
+    }
+    a.active {
+      color: $sccs-orange;
+    }
+    a:hover {
+      background-color: $sccs-orange;
+      color: white;
+    }
+  }
+  button.navbar-toggle {
+    border: none;
+    background-color: inherit;
+    &:hover {
+      background-color: $sccs-orange;
+    }
+    .icon-bar {
+      background-color: white;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $sccs-blue;
+}
