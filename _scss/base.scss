@@ -45,3 +45,16 @@ $sccs-orange: #f46336;
 h1, h2, h3, h4, h5, h6 {
   color: $sccs-blue;
 }
+
+#content {
+  a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    &:link, &:visited {
+      color: black;
+    }
+    &:hover {
+      color: $sccs-orange;
+    }
+  }
+}
