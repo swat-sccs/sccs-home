@@ -17,40 +17,34 @@ services:
 ---
 
 <div id="content" class="container">
-  <header class="row">
-    <div class="col-xs-12">
-      <h1 id="sccs-head">Swarthmore College Computer Society</h1>
-    </div>
+  <header>
+    <h1 id="sccs-head">Swarthmore College Computer Society</h1>
   </header>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <h2>Welcome!</h2>
+  </section>
+    <h2>Welcome!</h2>
 
-      <p>We're a collective of student volunteers who maintain digital services for
-      Swarthmore students, staff, and alumni.</p>
+    <p>We're a collective of student volunteers who maintain digital services for
+    Swarthmore students, staff, and alumni.</p>
 
-      <p>Have a problem? Contact us at
-      <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.
-      </p>
+    <p>Have a problem? Contact us at
+    <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Services</h2>
+    <div class="row">
+    {% for service in page.services %}
+      <a href="{{ service.url }}">
+        <div class="col-sm-6 col-md-4">
+          <div class="service-button">
+            <h4>{{ service.name }}</h4>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <h2>Services</h2>
-      <div class="row">
-      {% for service in page.services %}
-        <a href="{{ service.url }}">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-              <div class="service-button">
-                <h4>{{ service.name }}</h4>
-                <p>{{ service.description }}</p>
-              </div>
-            </div>
-        </a>
-      {% endfor %}
-      </div>
-    </div>
-  </div>
+  </section>
 </div>
