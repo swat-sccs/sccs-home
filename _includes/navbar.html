@@ -10,7 +10,7 @@
       </button>
 
       {% comment %}<a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/index.html">{% endcomment %}
-        <a class="navbar-brand" href="{{ base }}/index.html">
+        <a class="navbar-brand" href="{{ base }}/">
         <img id="logo" src="{{ base }}/images/logo.png"></img>
       </a>
     </div>
@@ -18,23 +18,22 @@
     <div class="collapse navbar-collapse" id="nav-links">
       <ul class="nav navbar-nav">
         <li>
-          {% assign page_title = page.title | downcase %}
           <a href="{{ base }}/" 
-            {% if page_title == 'home' %} class="active"{% endif %}>
+            {% if page.title == 'Home' %} class="active"{% endif %}>
             Home
           </a>
         </li>
 
         <li>
-          <a href="{{ base }}/about/index.html" 
-            {% if page_title == 'about' %}class="active"{% endif %}>
+          <a href="{{ base }}/about/" 
+            {% if page.title == 'About' %}class="active"{% endif %}>
             About
           </a>
         </li>
 
         <li>
-          <a href="{{ base }}/faqs/index.html" 
-            {% if page_title == 'faqs' %}class="active"{% endif %}>
+          <a href="{{ base }}/faqs/" 
+            {% if page.title == 'FAQs' %}class="active"{% endif %}>
             FAQs
           </a>
         </li>
