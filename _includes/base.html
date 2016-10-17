@@ -2,7 +2,7 @@
 
 {% assign base = '' %}
 {% assign sitedepth = site.url | split: '/' | size %}
-{% assign depth = page.url | split: '/' | size | minus: sitedepth %}
+{% assign depth = page.url | split: '/' | size - 1 %}
 <script>alert("{{ depth }}");</script>
 {% if    depth <= 1 %}{% assign base = '.' %}
 {% elsif depth == 2 %}{% assign base = '..' %}
