@@ -1,9 +1,8 @@
-div.match-cols {
-  overflow: hidden;
-  [class*="col-"] {
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-  }
+$post-date-color: #909090;
+
+p.post-date {
+  color: $post-date-color;
+  font-size: 0.8em;
 }
 
 .service-button {

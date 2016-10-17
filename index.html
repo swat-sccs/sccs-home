@@ -36,7 +36,9 @@ services:
     <h2>Announcements</h2>
     {% for post in site.posts %}
       <section class="announcement">
+        <h4>{{ post.title }}</h4>
         <p>{{ post.content }}</p>
+        <p class="post-date">{{ post.date | date: "%A, %B %-d, %Y"}}</p>
       </section>
     {% endfor %}
   </section>
