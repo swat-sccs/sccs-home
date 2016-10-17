@@ -21,7 +21,7 @@ services:
     <h1 id="sccs-head">Swarthmore College Computer Society</h1>
   </header>
 
-  </section>
+  <section>
     <h2>Welcome!</h2>
 
     <p>We're a collective of student volunteers who maintain digital services for
@@ -33,17 +33,25 @@ services:
   </section>
 
   <section>
+    <h2>Announcements</h2>
+    {% for post in site.posts %}
+      <p>{{ post.content }}</p>
+      {% if forloop.last == false %}
+        <hr>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <section>
     <h2>Services</h2>
     <div class="row">
     {% for service in page.services %}
-      <a href="{{ service.url }}">
-        <div class="col-sm-6 col-md-4">
-          <div class="service-button">
-            <h4>{{ service.name }}</h4>
-            <p>{{ service.description }}</p>
-          </div>
-        </div>
-      </a>
+      <div id="service-button-col" class="col-xs-6 col-md-4">
+        <button class="service-button" onclick="location.href='{{ service.url }}';">
+          <h4>{{ service.name }}</h4>
+          <p>{{ service.description }}</p>
+        </button>
+      </div>
     {% endfor %}
     </div>
   </section>

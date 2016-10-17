@@ -9,6 +9,12 @@ A Jekyll-based redesign of the unfortunately sparse
 - [ ] Have information about how to create an account
 - [ ] Look awesome
 
+## FAQs
+- Cygnet picture change/removal
+- Game pit
+- "I have a cool project idea"
+- "How do I join SCCS?"
+
 &copy;2016 SCCS
 
 

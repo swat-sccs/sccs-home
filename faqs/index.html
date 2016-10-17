@@ -5,22 +5,96 @@ permalink: /faqs/
 ---
 
 <div id="content" class="container">
-  <h1>Frequently Asked Questions</h1>
+  <header>
+    <h1>Frequently Asked Questions</h1>
+  </header>
 
   <section>
-    <h4>Q: How do I reset my SCCS password?</h4>
-    <p>A: Go to
-      <a href="https://guts.sccs.swarthmore.edu/user/password/change/">this link</a>.
+    <h4>Q: I forgot my SCCS password. Can I recover or reset it?</h4>
+    <p>A: You can reset your SCCS password
+      <a href="https://guts.sccs.swarthmore.edu/user/password/change/">here</a>.
     </p>
   </section>
 
   <section>
     <h4>Q: I haven't used my account for a while, and can't log in. What's the 
-    problem?</h4>
+      problem?</h4>
     <p>A: Our services are set up to temporarily deactivate the accounts of
-    users who haven't logged in for a while. Email us at 
+      users who haven't logged in for a while. Email us at 
+      <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a> 
+      and we'll be happy to restore your account.
+    </p>
+  </section>
+
+  <section>
+    <h4>Q: How can I change my picture or remove myself from the Cygnet?</h4>
+    <p>A: Email us at 
     <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a> 
-    and we'll be happy to restore your account.
+      with your username new picture (if applicable), and we will make the 
+      requested change(s). Please note that, by our policies, a replacement 
+      picture must clearly show your entire face.
+    </p>
+  </section>
+
+  <section>
+    <h4>Q: How do I join SCCS?</h4>
+    <p>A: We accept applications for new members every fall. We will have more
+    information available on <a href="{{ base }}/">our homepage</a> when we begin
+      accepting our next round of applications.
+    </p>
+  </section>
+
+  <section>
+    <h4>Q: I have a cool project idea. Could I work on it with SCCS?</h4>
+    <p>A: Yes! We are always interested in not only augmenting our old services,
+      but also adding new ones. Email us at
+      <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>;
+      we'd love to hear about your idea.
+    </p>
+  </section>
+
+  <section>
+    <h4>Q: Can you install a package for me on Heron?</h4>
+    <p>A: Almost definitely! We try to keep Heron (our login server) stocked 
+      with everything people want. If you need, for example, a compiler, 
+      interpreter, library, or command line tool that we don't have, we're happy 
+      to install it for you.
+    </p>
+  </section>
+
+  <section>
+    <h4>Q: Which domains should I use?</h4>
+    <p>A: We support the following domains:
+      <ul>
+        <li><code>www.sccs.swarthmore.edu</code> - web server</li>
+        <li><code>imap.sccs.swarthmore.edu</code> - IMAP server</li>
+        <li><code>smtp.sccs.swarthmore.edu</code> - SMTP server</li>
+        <li><code>ssh.sccs.swarthmore.edu</code> - SSH (login) server</li>
+      </ul>
+      Other domains are coincidental and liable to disappear without notice.
+    </p>
+  </section>
+
+  <section>
+    <h4>How do I configure my SCCS email account?</h2>
+    <p>A: If you would like to access your SCCS email using your own email
+      client (Gmail, mobile phone, iMail, Thunderbird, etc.) you can use the
+      below settings:
+      <pre><code>Incoming Server Settings
+      Username: your-sccs-username
+      Password: ********
+      IMAP Server: imap.sccs.swarthmore.edu
+      Port: 993
+      Security: SSL (If asked, accept all certificates)
+      IMAP Prefix: leave blank</code></pre>
+
+      <pre><code>Outgoing Server Settings
+      STMP Server: smtp.sccs.swarthmore.edu
+      Port: 587
+      Security: STARTTLS (If asked, accept all certificates)
+      Sign-in: Yes (Required)
+      Username: your-sccs-username
+      Password: ********</code></pre>
     </p>
   </section>
 </div>

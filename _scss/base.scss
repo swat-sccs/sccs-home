@@ -1,8 +1,21 @@
-$sccs-blue: #31425f;
 $sccs-orange: #f46336;
+$sccs-blue: #31425f;
+$sccs-light-orange: #fbd9b6;
+$sccs-light-blue: #bcccdc;
+$border-gray: #dddddd;
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 5rem; // Change this when lines are added to footer
 }
 
 .container {
@@ -57,8 +70,18 @@ h1, h2, h3, h4, h5, h6 {
       color: $sccs-orange;
     }
   }
-  section {
-    margin-bottom: 20px;
+  section:not(:first-of-type) { 
+    border-top: 0.5px solid $border-gray;
   }
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 0.5px solid $sccs-blue;
+  background-color: $sccs-light-blue;
+  padding: 5px;
 }
 

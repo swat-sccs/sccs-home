@@ -1,15 +1,14 @@
-$service-button-color: #eeeeee;
-
 .service-button {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding: 10px;
   height: 100%;
+  width: 100%;
   border: 1px solid $sccs-blue;
-  background-color: $service-button-color;
+  background-color: $sccs-light-blue;
   color: black;
+  text-align: left;
 }
 
 .service-button:hover {
-  background-color: $sccs-orange;
-  color: white;
+  background-color: $sccs-light-orange;
 }
