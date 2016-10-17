@@ -1,6 +1,6 @@
 ---
 layout: default
-title: home
+title: Home
 services:
   - name: Reserved Students Digest
     url: https://rsd.sccs.swarthmore.edu/
@@ -35,10 +35,9 @@ services:
   <section>
     <h2>Announcements</h2>
     {% for post in site.posts %}
-      <p>{{ post.content }}</p>
-      {% if forloop.last == false %}
-        <hr>
-      {% endif %}
+      <section class="announcement">
+        <p>{{ post.content }}</p>
+      </section>
     {% endfor %}
   </section>
 

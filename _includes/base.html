@@ -1,9 +1,8 @@
 {% comment %} _includes/base.html {% endcomment %}
 
 {% assign base = '' %}
-{% assign sitedepth = site.url | split: '/' | size %}
-{% assign depth = page.url | split: '/' | size - 1 %}
-<script>alert("{{ depth }}");</script>
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% comment %}{% assign depth = page.url | split: '/' | size %}{% endcomment %}
 {% if    depth <= 1 %}{% assign base = '.' %}
 {% elsif depth == 2 %}{% assign base = '..' %}
 {% elsif depth == 3 %}{% assign base = '../..' %}
