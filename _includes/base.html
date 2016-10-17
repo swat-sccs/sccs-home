@@ -1,9 +1,9 @@
 {% comment %} _includes/base.html {% endcomment %}
 
 {% assign base = '' %}
-{% comment %}{% assign depth = page.url | split: '/' | size %}{% endcomment %}
+{% assign depth = page.url | split: '/' | size %}
 {% comment %}TODO: uncomment this for development pushes to GitHub{% endcomment %}
-{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% comment %}{% assign depth = page.url | split: '/' | size | minus: 1 %}{% endcomment %}
 {% if    depth <= 1 %}{% assign base = '.' %}
 {% elsif depth == 2 %}{% assign base = '..' %}
 {% elsif depth == 3 %}{% assign base = '../..' %}
