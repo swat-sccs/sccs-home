@@ -1,5 +1,11 @@
 $post-date-color: #909090;
 
+.announcement {
+  code {
+    word-wrap: break-word;
+  }
+}
+
 p.post-date {
   color: $post-date-color;
   font-size: 0.8em;

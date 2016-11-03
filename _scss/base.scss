@@ -24,8 +24,16 @@ body {
   border-bottom: solid #dddddd 1px;
   text-shadow: none;
   background-color: $sccs-blue;
-  #logo {
-    max-height: 100%;
+  .navbar-brand {
+    position: relative;
+    width: 45px;
+    #logo {
+      position: absolute;
+      //top: 50%;
+      //left: 50%;
+      //transform: translate(-50%, -50%);
+      max-height: 40%;
+    }
   }
   #nav-links {
     a {
