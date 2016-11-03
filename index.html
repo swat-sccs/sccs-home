@@ -35,7 +35,7 @@ services:
 
   <section>
     <h2>Announcements</h2>
-    {% for post in site.posts %}
+    {% for post in site.posts limit:5 %}
       <section class="announcement">
         <h4>{{ post.title }}</h4>
         <p>{{ post.content }}</p>
