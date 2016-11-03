@@ -6,6 +6,19 @@ A Jekyll-based redesign of the unfortunately sparse
 ## How-to
 See the [Jekyll website](https://jekyllrb.com/docs/home/) for tutorials, etc.
 
+### Writing posts
+Add a file in .md format to the `_posts` directory. The file *must* have a name
+of the form `YYYY-MM-DD-title.md`, where `YYYY-MM-DD` is the date of the post
+and `title` is the title of the post. See old posts (or the official Jekyll
+tutorial linked above) for formatting details; but at minimum, the post must
+have a header at the top of the form:
+```ruby
+---
+title: YOUR_TITLE_HERE 
+---
+```
+Where `YOUR_TITLE_HERE` is the title that actually appears on the website.
+
 ### Setup
 `bundle install`
 
