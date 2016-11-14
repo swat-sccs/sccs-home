@@ -1,0 +1,10 @@
+{% comment %} _includes/base.html {% endcomment %}
+
+{% assign base = '' %}
+{% assign depth = page.url | split: '/' | size %}
+{% comment %}TODO: uncomment this for development pushes to GitHub{% endcomment %}
+{% comment %}{% assign depth = page.url | split: '/' | size | minus: 1 %}{% endcomment %}
+{% if    depth <= 1 %}{% assign base = '.' %}
+{% elsif depth == 2 %}{% assign base = '..' %}
+{% elsif depth == 3 %}{% assign base = '../..' %}
+{% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}

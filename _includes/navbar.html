@@ -1,0 +1,42 @@
+{% comment %} _includes/navbar.html {% endcomment %}
+
+<nav id="header-nav" class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-links">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="{{ base }}/">
+        <img id="logo" src="{{ base }}/images/logo.png"></img>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="nav-links">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="{{ base }}/" 
+            {% if page.title == 'Home' %} class="active"{% endif %}>
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ base }}/about/" 
+            {% if page.title == 'About' %}class="active"{% endif %}>
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="{{ base }}/faqs/" 
+            {% if page.title == 'FAQs' %}class="active"{% endif %}>
+            FAQs
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

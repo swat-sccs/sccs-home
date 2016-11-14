@@ -1,55 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
- 
+<html lang="en-US">
   {% include head.html %}
 
   <body>
-    <nav id="header-nav" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-links">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <a class="navbar-brand" href="{{ site.url }}/index.html">
-            <img id="logo" src="{{ site.url }}/images/logo.png"></img>
-          </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="nav-links">
-          <ul class="nav navbar-nav">
-            <li>
-              {% assign page_title = page.title | downcase %}
-              <a href="{{ site.url}}/index.html" 
-                {% if page_title == 'home' %} class="active"{% endif %}>
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a href="{{ site.url }}/about/index.html" 
-                {% if page_title == 'about' %}class="active"{% endif %}>
-                About
-              </a>
-            </li>
-
-            <li>
-              <a href="{{ site.url }}/faqs/index.html" 
-                {% if page_title == 'faqs' %}class="active"{% endif %}>
-                FAQs
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include navbar.html %}
 
     {{ content }}
 
-    {% include js_includes.html %}
+    {% include footer.html %}
 
+    {% include js_includes.html %}
   </body>
 </html>
 
