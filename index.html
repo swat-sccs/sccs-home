@@ -19,18 +19,19 @@ services:
     url: http://gpacalc.sccs.swarthmore.edu/
     description: >
       A fast and easy GPA calculator for Swarthmore students.
-  - name: Link Shortener
-    url: http://swat.life/
-    description: >
-      A simple link shortener. Give your url a short Swarthmore flair!
   - name: Course Scheduler
-    url: http://schedule.sccs.swarthmore.edu/
+    url: https://schedule.sccs.swarthmore.edu/
     description: >
-      An visual way to plan out you classes for the next semester.
-  - name: Facebook Bot
-    url: http://m.me/sccsbot/
+      A visual way to plan out your classes for the next semester.
+  - name: Airpool
+    url: https://airpool.sccs.swarthmore.edu/
     description: >
-      A facebook bot that keeps you up to date with all the goings on around Swarthmore.
+      A tool for Swatties to organize carpools to and from the Philadelphia airport during breaks.
+  - name: <b>New! </b>Sites
+    url: https://sites.sccs.swarthmore.edu/
+    new: T
+    description: >
+      Create websites using Wordpress. No coding experience necessary.
 ---
 
 <div id="content" class="container">
@@ -43,10 +44,27 @@ services:
 
     <p>We're a collective of student volunteers who maintain digital services for
     Swarthmore students, staff, and alumni.</p>
-
-    <p>Have a problem? Contact us at
-    <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swarthmore.edu</a>.
-    </p>
+	<div class="row">
+		<div class="col-xs-6 col-md-4">
+			{% for service in page.services %}
+			{% if service.name == "Dashboard" %}
+			<button class="service-button" onclick="location.href='{{ service.url }}';">
+				<h4>{{ service.name }}</h4>
+				<p>{{ service.description }}</p>
+			</button>
+			{% endif %}
+			{% endfor %}
+		</div>
+		<div class="col-xs-6 col-md-8">
+			<p> 
+							The Dashboard link is our main controller for many of the features we support with a SCCS account. This page allows you to 
+			<strong>
+				create listservs, databases, access your current lists, and change your password
+			</strong>
+			. For any questions you may contact us at <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swathmore.edu</a> or visit our FAQs page for the most asked questions.
+			</p>	
+		</div>
+	</div>
   </section>
 
   <section>
@@ -64,12 +82,14 @@ services:
     <h2>Services</h2>
     <div class="row match-cols">
     {% for service in page.services %}
+	  {% unless service.name == "Dashboard" %}	
       <div class="col-xs-6 col-md-4">
-        <button class="service-button" onclick="location.href='{{ service.url }}';">
+        <button class="{% if service.new %}newService {% endif %}service-button" onclick="location.href='{{ service.url }}';">
           <h4>{{ service.name }}</h4>
           <p>{{ service.description }}</p>
         </button>
       </div>
+      {% endunless %}
     {% endfor %}
     </div>
   </section>

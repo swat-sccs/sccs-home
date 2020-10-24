@@ -3,8 +3,11 @@ description: >
   The Swarthmore College Computer Society (SCCS) is a student-run group offering 
   computing services, tools, toys, and information to the Swarthmore College 
   community. 
-  url: "http://sccs.swarthmore.edu" 
-  destination: ../homepage
+url: "http://sccs.swarthmore.edu" 
+destination: /srv/services/homepage
+
+# Add deploy script to copy over mailman_cookie
+exclude: ["deploy"]
 
 # CSS stuff
 sass:
