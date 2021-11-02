@@ -1,5 +1,6 @@
 ---
-title: "Service Outage Update"
+title: "SCCS is Back Up"
+date: 2021-11-02 16:10:00 -0400
 ---
 
-All SCCS services except the mailing list web interface are back online. We're continuing to work on bringing that web interface back up, and will post a final update here when that happens. The mailing list backend is online; you can still send messages to existing listservs and they'll be distributed normally. If you urgently need to make edits to a mailing list or approve an outgoing message, [email us](mailto:staff@sccs.swarthmore.edu). 
+All SCCS services are back online and fully functional as of 4:10 PM Eastern Time. We're deeply sorry for any inconvenience caused. If you're still having trouble, [email us](mailto:staff@sccs.swarthmore.edu). 
