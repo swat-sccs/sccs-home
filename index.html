@@ -56,13 +56,13 @@ services:
 			{% endfor %}
 		</div>
 		<div class="col-xs-6 col-md-8">
-			<p> 
-							The Dashboard link is our main controller for many of the features we support with a SCCS account. This page allows you to 
+			<p>
+							The Dashboard link is our main controller for many of the features we support with a SCCS account. This page allows you to
 			<strong>
 				create listservs, databases, access your current lists, and change your password
 			</strong>
 			. For any questions you may contact us at <a href="mailto:staff@sccs.swarthmore.edu">staff@sccs.swathmore.edu</a> or visit our FAQs page for the most asked questions.
-			</p>	
+			</p>
 		</div>
 	</div>
   </section>
@@ -76,13 +76,13 @@ services:
         <p class="post-date">{{ post.date | date: "%A, %B %-d, %Y"}}</p>
       </section>
     {% endfor %}
-  </section>
+  </section> 
 
   <section>
     <h2>Services</h2>
     <div class="row match-cols">
     {% for service in page.services %}
-	  {% unless service.name == "Dashboard" %}	
+	  {% unless service.name == "Dashboard" %}
       <div class="col-xs-6 col-md-4">
         <button class="{% if service.new %}newService {% endif %}service-button" onclick="location.href='{{ service.url }}';">
           <h4>{{ service.name }}</h4>

@@ -17,21 +17,34 @@
     <div class="collapse navbar-collapse" id="nav-links">
       <ul class="nav navbar-nav">
         <li>
-          <a href="{{ base }}/" 
+          <a href="{{ base }}/"
             {% if page.title == 'Home' %} class="active"{% endif %}>
             Home
           </a>
         </li>
 
         <li>
-          <a href="{{ base }}/about/" 
+          <a href="{{ base }}/about/"
             {% if page.title == 'About' %}class="active"{% endif %}>
             About
           </a>
         </li>
-
+      <!---  <li>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FAQs</button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="{{ base }}/faqs/"
+                  {% if page.title == 'FAQs' %}class="active"{% endif %}>Cygnet</a>
+                <a class="dropdown-item" href="{{ base }}/faqs/"
+                  {% if page.title == 'FAQs' %}class="active"{% endif %}>Account</a>
+                <a class="dropdown-item" href="{{ base }}/faqs/"
+                  {% if page.title == 'FAQs' %}class="active"{% endif %}>Lists</a>
+              </div>
+          </div>
+        </li>--->
         <li>
-          <a href="https://sites.sccs.swarthmore.edu/sccsfaq/" 
+          <a href="{{ base }}/faqs/"
             {% if page.title == 'FAQs' %}class="active"{% endif %}>
             FAQs
           </a>
