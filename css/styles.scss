@@ -4,3 +4,7 @@
 @import "home";
 @import "about";
 @import "faqs";
+
+#content section:not(:first-of-type) {
+  border-top: none !important;
+}

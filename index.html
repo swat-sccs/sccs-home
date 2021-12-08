@@ -39,23 +39,23 @@ services:
     <h1 id="sccs-head">Swarthmore College Computer Society</h1>
   </header>
   <div class= "row">
-  <section class = 'col-xs-6 col-md-8'>
+  <section class = 'col-xs-12 col-md-6'>
     <h2>Welcome!</h2>
 
     <p>We're a collective of student volunteers who maintain digital services for
     Swarthmore students, staff, and alumni.</p>
-	<div class="row">
-		<div class="col-xs-6 col-md-4">
+	<div>
+		<div>
 			{% for service in page.services %}
 			{% if service.name == "Dashboard" %}
-			<button class="service-button" onclick="location.href='{{ service.url }}';">
+			<button class="service-dash-button" onclick="location.href='{{ service.url }}';">
 				<h4>{{ service.name }}</h4>
 				<p>{{ service.description }}</p>
 			</button>
 			{% endif %}
 			{% endfor %}
 		</div>
-		<div class="col-xs-6 col-md-8">
+		<div>
 			<p>
 							The Dashboard link is our main controller for many of the features we support with a SCCS account. This page allows you to
 			<strong>
@@ -67,7 +67,7 @@ services:
 	</div>
   </section>
 
-  <section class = 'col-xs-6 col-md-4'>
+  <section class = 'col-xs-12 col-md-6'>
     <h2>Announcements</h2>
     {% for post in site.posts limit:3 %}
       <section class="announcement">
@@ -83,7 +83,7 @@ services:
     <div class="row match-cols">
     {% for service in page.services %}
 	  {% unless service.name == "Dashboard" %}
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-12 col-md-6">
         <button class="{% if service.new %}newService {% endif %}service-button" onclick="location.href='{{ service.url }}';">
           <h4>{{ service.name }}</h4>
           <p>{{ service.description }}</p>
