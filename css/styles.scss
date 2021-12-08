@@ -6,5 +6,9 @@
 @import "faqs";
 
 #content section:not(:first-of-type) {
-  border-top: none !important;
+  border-top: none;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
