@@ -22,6 +22,17 @@ p.post-date {
   text-align: left;
 }
 
+.service-dash-button {
+  margin: 20px 17.5% ;
+  padding: 10px;
+  width: 65%;
+  outline: none;
+  border: 1px solid $sccs-blue;
+  background-color: $sccs-light-blue;
+  color: black;
+  text-align: left;
+}
+
 .service-button:hover {
   background-color: $sccs-light-orange;
 }
